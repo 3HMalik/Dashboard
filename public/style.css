@@ -1,0 +1,30 @@
+body {
+    padding-top: 65px;
+}
+
+
+.box {
+    float: center;
+    background: rgb(128, 110, 110);
+    margin: 10px auto 0;
+    width: 310px;
+    height: 400px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    border: 1px solid #000000;
+    text-align: center;
+    position: relative;
+}
+
+.box2 {
+    float: center;
+    background: rgb(32, 31, 31);
+    margin: 10px auto 0;
+    width: 300px;
+    height: 450px;
+    color: rgb(156, 50, 31);
+    font-size: 24px;
+    border: 1px solid #000000;
+    text-align: center;
+    position: relative;
+}
