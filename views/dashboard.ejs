@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/images/logo.png" alt="" width="30" height="30" class="d-inline-block align-top"> DASHBOARD
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="btn btn-outline-primary btn-lg" aria-current="page" href="/dashboard">Home</a>
+          </li>
+          <ul>
+            <li class="nav-item">
+              <a class="btn btn-outline-success btn-lg" href="/display/services">Services</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary btn-lg" href="/stories/add">Unsplash</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary btn-lg" href="/weather/add">Weather</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary btn-lg" href="/youtube/add">YouTube</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="nav-item">
+              <a class="btn btn-outline-success btn-lg" href="/spotify/add">Spotify</a>
+            </li>
+          </ul>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= name %> <%= name2 %> </p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>

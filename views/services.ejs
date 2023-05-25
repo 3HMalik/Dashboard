@@ -1,0 +1,151 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/images/logo.png" alt="" width="30" height="30" class="d-inline-block align-top"> DASHBOARD
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="btn btn-outline-primary btn-lg" aria-current="page" href="/dashboard">Home</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
+
+<h1>This is a list of all the widgets we have:</h1>
+
+
+<div class="row">
+  <% for(var i = 0;i < List.length; i++){ %>
+  <div class="col-md-4">
+    <div class="box">
+      <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="<%= List[i].link %>" style="height: 180px">
+          <div class="card-body">
+          <h5 class="card-title">Likes : <%= List[i].likes %></h5>
+          <p class="card-text">Image posted by <strong><%= List[i].name%></strong> </p>
+          <a href="/stories/edit/<%= List[i].id %>" type="button" class="btn btn-danger">Edit</a>
+          <a href="/stories/delete/<%= List[i].id %>" type="button" class="btn btn-primary">Delete</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="d-flex align-items-center p-3 my-3 text-white bg-info rounded shadow-sm"></div>
+<br/> 
+<br/> 
+
+<div class="row">
+  <% for(var i = 0;i < Weather.length; i++){ %>
+  <div class="col-md-4">
+    <div class="box2">
+      <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="http://openweathermap.org/img/w/<%= Weather[i].link %>.png" style="height: 180px">
+          <div class="card-body">
+          <h5 class="card-title">City : <%= Weather[i].city %></h5>
+          <p class="card-text">Temperature: <strong><%= Weather[i].temp%>°</strong>, Humidity: <strong><%= Weather[i].humid%>%</strong>, 
+            The weather is <strong><%= Weather[i].desc%></strong>
+          </p>
+          <a href="/weather/edit/<%= Weather[i].id %>" type="button" class="btn btn-danger">Edit</a>
+          <a href="/weather/delete/<%= Weather[i].id %>" type="button" class="btn btn-primary">Delete</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm"></div>
+<br/>
+<br/>
+
+
+<div class="row">
+  <% for(var i = 0;i < yt.length; i++){ %>
+  <div class="col-md-4">
+      <div class="card" style="width: 25rem;">
+          <img class="card-img-top" src="<%= yt[i].img %>" style="height: 300px">
+          <div class="card-body">
+          <h5 class="card-title">Name : <%= yt[i].name %></h5>
+          <p class="card-text">Subscribers: <strong><%= yt[i].sub%></strong></p>
+          <a href="/youtube/edit/<%= yt[i].id %>" type="button" class="btn btn-danger">Edit</a>
+          <a href="/youtube/delete/<%= yt[i].id %>" type="button" class="btn btn-primary">Delete</a>
+          </div>
+      </div>
+  </div>
+  <% } %>
+</div>
+<br/>
+<br/>
+<div class="row">
+  <% for(var i = 0;i < yt.length; i++){ %>
+  <div class="col-md-4">
+      <div class="card" style="width: 25rem;">
+          <img class="card-img-top" src="/images/sec.jpg" style="height: 300px">
+          <div class="card-body">
+          <h4 class="card-title">Youtuber : <%= yt[i].name %></h4>
+          <h5 class="card-title"><a class="btn btn-info" target="_blank" href="<%= yt[i].link %> " role="button">Visit channel</a></h5>
+          <p class="card-text">Description: <strong><%= yt[i].desc%></strong></p>
+          </div>
+      </div>
+  </div>
+  <% } %>
+</div>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="d-flex align-items-center p-3 my-3 text-white bg-light rounded shadow-sm"></div>
+<br/>
+<br/>
+
+<div class="row">
+  <% for(var i = 0;i < spotify.length; i++){ %>
+  <div class="col-md-4">
+      <div class="card" style="width: 25rem;">
+          <img class="card-img-top" src="<%= spotify[i].img %>" style="height: 300px">
+          <div class="card-body">
+          <h5 class="card-title">Name : <%= spotify[i].name %></h5>
+          <p class="card-text">Followers: <strong><%= spotify[i].follow%></strong></p>
+          <a href="/spotify/edit/<%= spotify[i].id %>" type="button" class="btn btn-danger">Edit</a>
+          <a href="/spotify/delete/<%= spotify[i].id %>" type="button" class="btn btn-primary">Delete</a>
+          </div>
+      </div>
+  </div>
+  <% } %>
+</div>
+<br/>
+<br/>
+<div class="row">
+  <% for(var i = 0;i < spotify.length; i++){ %>
+  <div class="col-md-4">
+      <div class="card" style="width: 25rem;">
+          <img class="card-img-top" src="/images/spotify.jpg" style="height: 300px">
+          <div class="card-body">
+          <h4 class="card-title">Artist : <%= spotify[i].name %></h4>
+          <h5 class="card-title"><a class="btn btn-info" target="_blank" href="<%= spotify[i].link %> " role="button">Visit Spotify</a></h5>
+          <p class="card-text">Genre: <strong><%= spotify[i].genre%></strong></p>
+          </div>
+      </div>
+  </div>
+  <% } %>
+</div>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="d-flex align-items-center p-3 my-3 text-white bg-success rounded shadow-sm"></div>
+<br/>
+<br/>
